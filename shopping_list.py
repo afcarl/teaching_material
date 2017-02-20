@@ -1,46 +1,39 @@
 
 
 def split_line_into_item_and_mark(line):
-    return split_string(line, ' ')
+    item = ''
+    mark = ''
+    # Remove the two lines above and write your code to the solution
+    return [item, mark]
 
 
 
 
 def mark_to_bool(mark):
-    return mark == '/'
+    # Delete the line below and and write your code to the solution
+    return False
 
 
 
 def filter_out_ticked_items(items, marks):
     # Delete the line below and and write your code to the solution
-    return [item for item, mark in zip(items, marks) if not mark_to_bool(mark)]
+    return items
 
 
 
 def get_list_of_items_to_get(shopping_list):
-    lines = split_string(shopping_list, '\n')
-
-    items = []
-    marks = []
-    for line in lines:
-        item, mark = split_line_into_item_and_mark(line)
-        items.append(item)
-        marks.append(mark)
-
-    items_to_get = filter_out_ticked_items(items, marks)
-    return items_to_get
-
-
+    # Delete the line below and and write your code to the solution
+    return []
 
 # BELOW THIS IS EXTENSION QUESTIONS. MAKE SURE YOU HAVE ALL TESTS PASSING FOR THE FUNCTIONS
 # BEFORE THIS.
 def turn_shopping_list_to_dict(items, marks):
     # Delete the line below and and write your code to the solution
-    return {item: mark_to_bool(mark) for item, mark in zip(items, marks)}
+    return {}
 
 
 def buy_item(shopping_dict, item):
-    shopping_dict[item] = True
+    # Delete the line below and and write your code to the solution
     return shopping_dict
 
 
@@ -51,7 +44,7 @@ def make_shopping_list_string(shopping_dict):
 
 def get_unbought_items(shopping_dict):
     # Delete the line below and and write your code to the solution
-    return [item for item, bought in shopping_dict.items() if not bought]
+    return []
 
 
 # BELOW THIS ARE ALL FUNCTIONS YOU SHOULD NOT TOUCH!!. IF YOU ARE INTERESTED
@@ -105,6 +98,7 @@ def advanced_shopping_list_program():
             print('This item is not on your shopping list')
 
     print('You have bought all the items on your list.!')
+
 
 def test(f, *input_expecteds):
     print('testing {}:'.format(f.__name__))
@@ -200,5 +194,3 @@ test(
         [{'pears': True, '£50-steam-voucher': False, 'apple': False,}],
         ['apple', '£50-steam-voucher'])
 )
-import code
-code.interact(local=locals())
