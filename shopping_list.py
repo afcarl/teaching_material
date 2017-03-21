@@ -7,23 +7,41 @@ def split_line_into_item_and_mark(line):
     return [item, mark]
 
 
-
-
 def mark_to_bool(mark):
-    # Delete the line below and and write your code to the solution
-    return False
-
+    if mark == '/':
+        return True
+    else:
+        return False
 
 
 def filter_out_ticked_items(items, marks):
-    # Delete the line below and and write your code to the solution
-    return items
+    filtered_items = []
+    for i in range(len(items)):
+        mark = marks[i]
+        item = items[i]
+        if not mark_to_bool(mark):
+            filtered_items = filtered_items + [item]
 
+    return filtered_items
 
 
 def get_list_of_items_to_get(shopping_list):
-    # Delete the line below and and write your code to the solution
-    return []
+    lines = split_string(shopping_list, '\n')
+
+    items = []
+    marks = []
+    for i in range(len(lines)):
+        line = lines[i]
+        result = split_string(line, ' ')
+        item = result[0]
+        mark = result[1]
+
+        items = items + [item]
+        marks = marks + [mark]
+
+
+    return filter_out_ticked_items(items, marks)
+
 
 # BELOW THIS IS EXTENSION QUESTIONS. MAKE SURE YOU HAVE ALL TESTS PASSING FOR THE FUNCTIONS
 # BEFORE THIS.
@@ -194,3 +212,6 @@ test(
         [{'pears': True, '£50-steam-voucher': False, 'apple': False,}],
         ['apple', '£50-steam-voucher'])
 )
+
+import code  # NOQA
+code.interact(local=locals())

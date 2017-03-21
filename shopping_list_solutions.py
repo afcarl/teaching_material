@@ -4,17 +4,13 @@ def split_line_into_item_and_mark(line):
     return split_string(line, ' ')
 
 
-
-
 def mark_to_bool(mark):
     return mark == '/'
-
 
 
 def filter_out_ticked_items(items, marks):
     # Delete the line below and and write your code to the solution
     return [item for item, mark in zip(items, marks) if not mark_to_bool(mark)]
-
 
 
 def get_list_of_items_to_get(shopping_list):
