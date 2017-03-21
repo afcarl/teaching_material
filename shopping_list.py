@@ -1,46 +1,24 @@
 
 
 def split_line_into_item_and_mark(line):
-    item = ''
-    mark = ''
-    # Remove the two lines above and write your code to the solution
-    return [item, mark]
+    # write your code to the solution here
+    return []
 
 
 def mark_to_bool(mark):
-    if mark == '/':
-        return True
-    else:
-        return False
+    # enter code here
+    return False
 
 
 def filter_out_ticked_items(items, marks):
     filtered_items = []
-    for i in range(len(items)):
-        mark = marks[i]
-        item = items[i]
-        if not mark_to_bool(mark):
-            filtered_items = filtered_items + [item]
-
+    # enter code here
     return filtered_items
 
 
 def get_list_of_items_to_get(shopping_list):
-    lines = split_string(shopping_list, '\n')
-
-    items = []
-    marks = []
-    for i in range(len(lines)):
-        line = lines[i]
-        result = split_string(line, ' ')
-        item = result[0]
-        mark = result[1]
-
-        items = items + [item]
-        marks = marks + [mark]
-
-
-    return filter_out_ticked_items(items, marks)
+    # enter code here
+    return []
 
 
 # BELOW THIS IS EXTENSION QUESTIONS. MAKE SURE YOU HAVE ALL TESTS PASSING FOR THE FUNCTIONS
